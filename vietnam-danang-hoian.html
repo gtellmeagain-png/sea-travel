@@ -10,12 +10,23 @@
 
   /* ヒーロー */
   .hero {
-    background-image: url('https://cdn2.veltra.com/ptr/20190607063156_2027026882_2087_0.jpg?imwidth=800&impolicy=custom');
-    background-size: cover; background-position: center;
     height: 320px; display: flex; align-items: flex-end;
-    padding: 24px 32px;
+    padding: 24px 32px; position: relative; overflow: hidden;
+  }
+  .hero::before, .hero::after {
+    content: ''; position: absolute; top: 0; bottom: 0; width: 50%;
+    background-size: cover; background-position: center;
+  }
+  .hero::before {
+    left: 0;
+    background-image: url('https://cdn2.veltra.com/ptr/20190607063156_2027026882_2087_0.jpg?imwidth=800&impolicy=custom');
+  }
+  .hero::after {
+    right: 0;
+    background-image: url('https://www.tnkjapan.com/jvs/img/tourist/lantern01.jpg');
   }
   .hero-title {
+    position: relative; z-index: 1;
     background: rgba(0,0,0,0.55); color: #fff;
     padding: 12px 20px; border-radius: 8px;
     font-size: 24px; font-weight: bold;
@@ -191,7 +202,7 @@
   <section id="location">
     <h2>🗺️ 位置関係</h2>
     <div class="location-box">
-      🇻🇳 ベトナム<br>
+      ベトナム<br>
       ▼ <strong>ダナン</strong>（中部最大の都市）<br>
       ↓ 車・タクシーで約30〜40分<br>
       ▼ <strong>ホイアン</strong>（世界遺産の古都）<br>
