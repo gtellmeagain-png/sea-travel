@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ベトナム / ダナン・ホイアン</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; background: #f9f9f8; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
+
+  /* ヒーロー */
+  .hero {
+    background-image: url('https://cdn2.veltra.com/ptr/20190607063156_2027026882_2087_0.jpg?imwidth=800&impolicy=custom');
+    background-size: cover; background-position: center;
+    height: 320px; display: flex; align-items: flex-end;
+    padding: 24px 32px;
+  }
+  .hero-title {
+    background: rgba(0,0,0,0.55); color: #fff;
+    padding: 12px 20px; border-radius: 8px;
+    font-size: 24px; font-weight: bold;
+  }
+
+  /* レイアウト */
+  .container { max-width: 860px; margin: 0 auto; padding: 32px 20px; }
+
+  /* 目次 */
+  .toc {
+    background: #eef4ff; border-left: 4px solid #4a90d9;
+    padding: 16px 20px; border-radius: 6px; margin-bottom: 32px;
+  }
+  .toc h3 { font-size: 14px; margin-bottom: 8px; color: #4a90d9; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .toc a { color: #4a90d9; text-decoration: none; font-size: 14px; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* キャッチコピー */
+  .catch {
+    background: #fff; border-left: 4px solid #e8a000;
+    padding: 14px 18px; border-radius: 6px; margin-bottom: 16px;
+    font-size: 15px;
+  }
+  .catch p { margin: 4px 0; }
+
+  /* 基本情報バッジ */
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+  .badge {
+    background: #fff; border: 1px solid #ddd;
+    padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: bold;
+  }
+
+  /* セクション */
+  section { margin-bottom: 48px; }
+  h2 { font-size: 20px; font-weight: bold; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #e0e0e0; }
+
+  /* メリデメ */
+  .merit-demerit { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 600px) { .merit-demerit { grid-template-columns: 1fr; } }
+  .merit, .demerit {
+    background: #fff; border-radius: 8px; padding: 16px 20px;
+    border: 1px solid #e0e0e0;
+  }
+  .merit h3 { color: #2e7d32; margin-bottom: 8px; }
+  .demerit h3 { color: #c62828; margin-bottom: 8px; }
+  .merit ul, .demerit ul { padding-left: 18px; }
+  .merit li, .demerit li { margin: 4px 0; font-size: 14px; }
+
+  /* 位置関係 */
+  .location-box {
+    background: #fff8e1; border: 1px solid #ffe082;
+    border-radius: 8px; padding: 16px 20px; font-size: 14px; line-height: 2;
+  }
+  .location-box a { color: #e67e00; }
+
+  /* セクション画像（幅広） */
+  .section-img { width: 100%; max-height: 320px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; }
+
+  /* 箇条書き */
+  .text-list { padding-left: 20px; margin: 8px 0 12px; }
+  .text-list li { margin: 6px 0; }
+
+  /* 3カラムタイル */
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 16px; }
+  @media (max-width: 640px) { .tiles { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 400px) { .tiles { grid-template-columns: 1fr; } }
+
+  .tile {
+    background: #fff; border-radius: 8px; overflow: hidden;
+    border: 1px solid #e0e0e0;
+  }
+  .tile img { width: 100%; height: 140px; object-fit: cover; display: block; }
+  .tile-body { padding: 10px 12px; }
+  .tile-body strong { display: block; font-size: 13px; margin-bottom: 4px; }
+  .tile-body p { font-size: 12px; color: #555; margin-bottom: 6px; line-height: 1.5; }
+  .tile-body a { font-size: 12px; color: #4a90d9; text-decoration: none; }
+  .tile-body a:hover { text-decoration: underline; }
+
+  /* 2カラムタイル（ビーチ用） */
+  .tiles-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  @media (max-width: 500px) { .tiles-2 { grid-template-columns: 1fr; } }
+
+  /* 食事リスト */
+  .food-list { list-style: none; padding: 0; }
+  .food-list li { background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px 14px; margin-bottom: 8px; font-size: 14px; }
+  .food-list a { color: #4a90d9; font-size: 12px; margin-left: 8px; }
+
+  /* 宿泊 */
+  .stay-option {
+    background: #fff; border: 1px solid #e0e0e0; border-radius: 8px;
+    padding: 14px 18px; margin-bottom: 12px;
+  }
+  .stay-option strong { font-size: 15px; }
+  .stay-option .price { color: #888; font-size: 13px; margin-top: 4px; }
+  .stay-img { width: 100%; max-height: 220px; object-fit: cover; border-radius: 6px; margin-top: 10px; }
+
+  /* 区切り線 */
+  hr { border: none; border-top: 1px solid #e0e0e0; margin: 32px 0; }
+
+  /* 画像を見る → */
+  .img-link { font-size: 12px; color: #4a90d9; text-decoration: none; }
+  .img-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<!-- ヒーロー -->
+<div class="hero">
+  <div class="hero-title">ベトナム / ダナン・ホイアン</div>
+</div>
+
+<div class="container">
+
+  <!-- キャッチ -->
+  <div class="catch">
+    <p><strong>ダナン</strong> → 8月は乾季のベストシーズン。長い白砂ビーチと近代的な都市。</p>
+    <p><strong>ホイアン</strong> → ダナンから車で30分。世界遺産のランタンが灯る古い街並み。</p>
+  </div>
+
+  <!-- 基本情報バッジ -->
+  <div class="badges">
+    <span class="badge">✈️ 日本から直行 約5〜6時間</span>
+    <span class="badge">🌙 3〜4泊</span>
+    <span class="badge">☀️ 8月は乾季（ベストシーズン）</span>
+    <span class="badge">💰 約5千〜2万円/泊（2名合計）</span>
+  </div>
+
+  <!-- 目次 -->
+  <div class="toc">
+    <h3>📌 目次</h3>
+    <ol>
+      <li><a href="#merit">メリット・デメリット</a></li>
+      <li><a href="#location">位置関係</a></li>
+      <li><a href="#danang">ダナンとは</a></li>
+      <li><a href="#spots">観光スポット / 見どころ</a></li>
+      <li><a href="#activity">アクティビティ</a></li>
+      <li><a href="#night">夜の過ごし方</a></li>
+      <li><a href="#cafe">カフェ・グルメスポット</a></li>
+      <li><a href="#food">食事</a></li>
+      <li><a href="#stay">宿泊のおすすめ</a></li>
+      <li><a href="#hoian">ホイアン旧市街</a></li>
+      <li><a href="#beach">ビーチ</a></li>
+    </ol>
+  </div>
+
+  <!-- メリデメ -->
+  <section id="merit">
+    <h2>✅ メリット・デメリット</h2>
+    <div class="merit-demerit">
+      <div class="merit">
+        <h3>👍 メリット</h3>
+        <ul>
+          <li>直行便あり・8月は乾季でベストシーズン</li>
+          <li>ビーチ×世界遺産の両立という稀有な組み合わせ</li>
+          <li>コスパ良し・食事が高レベルで安い</li>
+          <li>ホイアン・フエへのアクセスが容易</li>
+        </ul>
+      </div>
+      <div class="demerit">
+        <h3>👎 デメリット</h3>
+        <ul>
+          <li>夜遊びは控えめ（バンコクほどのナイトライフはない）</li>
+          <li>8月下旬からスコールが増え始める</li>
+          <li>ホイアン旧市街は人が多く混雑</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 位置関係 -->
+  <section id="location">
+    <h2>🗺️ 位置関係</h2>
+    <div class="location-box">
+      🇻🇳 ベトナム<br>
+      ▼ <strong>ダナン</strong>（中部最大の都市）<br>
+      ↓ 車・タクシーで約30〜40分<br>
+      ▼ <strong>ホイアン</strong>（世界遺産の古都）<br>
+      ↓ 車で約1時間<br>
+      ▼ <strong>フエ</strong>（古都・グエン朝王宮）<br>
+      ↓ 車で約3〜4時間<br>
+      ▼ <strong>フォンニャ・ケバン国立公園</strong>（世界遺産の洞窟群）<br><br>
+      <a href="https://www.google.com/maps/dir/Da+Nang/Hoi+An,+Vietnam" target="_blank">🗺️ Google Maps で位置を確認する →</a>
+    </div>
+  </section>
+
+  <!-- ダナンとは -->
+  <section id="danang">
+    <h2>🏖️ ダナンとは</h2>
+    <img class="section-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7XgVXBkOSAxqEhidLYSQSLDJj3I5gQbNn3w&s" alt="ダナン ミーケービーチ">
+    <ul class="text-list">
+      <li>ベトナム中部最大の都市。近代的なビル群と長いビーチが共存</li>
+      <li>ミーケービーチは全長約30kmの白砂ビーチ。8月は快晴が続く</li>
+      <li>リゾートホテルが充実しており、ゆったり過ごすのに最適</li>
+    </ul>
+    <a class="img-link" href="https://www.google.com/search?q=ダナン+ミーケービーチ+8月&tbm=isch" target="_blank">画像を見る →</a>
+  </section>
+
+  <!-- 観光スポット -->
+  <section id="spots">
+    <h2>🛕 観光スポット / 見どころ</h2>
+    <div class="tiles">
+      <div class="tile">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvQAZS8OzHEJxQwZdX9TP1P0Xi8fSqhO_iKQ&s" alt="ミーケービーチ">
+        <div class="tile-body">
+          <strong>ミーケービーチ</strong>
+          <p>ダナンから最も近いビーチ。全長約30kmの白砂ビーチで、ジェットスキー・バナナボート・スノーケリングなどマリンスポーツが盛ん。</p>
+          <a class="img-link" href="https://www.google.com/search?q=ミーケービーチ+ダナン&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8rpiSZbpm-MV4yDXip2VfcMdWTcEME0QUVQ&s" alt="バーナーヒルズ">
+        <div class="tile-body">
+          <strong>バーナーヒルズ（Ba Na Hills）</strong>
+          <p>ダナン郊外の山上リゾート。ケーブルカーで標高1,487mへ。フレンチヴィラ・テーマパーク・絶景が楽しめる。</p>
+          <a class="img-link" href="https://www.google.com/search?q=バーナーヒルズ+Ba+Na+Hills+ダナン&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/86/2023/08/30021548/Kh%C3%A1nh-Phan.jpg" alt="黄金の橋">
+        <div class="tile-body">
+          <strong>🌉 黄金の橋（Golden Bridge）</strong>
+          <p>バーナーヒルズ内にあるスポット。巨大な石の手に支えられた黄金色の橋。SNSで世界的に有名な絶景スポット。</p>
+          <a class="img-link" href="https://www.google.com/search?q=黄金の橋+Golden+Bridge+バーナーヒルズ&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+    </div>
+    <div class="tiles">
+      <div class="tile">
+        <img src="https://www.veltra.com/jp/guide/wp-content/uploads/2024/04/AdobeStock_233730931-min-1024x674.jpeg" alt="ホイアン旧市街">
+        <div class="tile-body">
+          <strong>ホイアン旧市街</strong>
+          <p>ユネスコ世界遺産。夜はランタンが灯り幻想的な雰囲気。</p>
+          <a class="img-link" href="https://www.google.com/search?q=ホイアン+旧市街+ランタン+夜&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://www.tnkjapan.com/jvs/img/tourist/nguyen_dynasty015.jpg" alt="グエン朝王宮">
+        <div class="tile-body">
+          <strong>グエン朝王宮（フエ）</strong>
+          <p>ダナンから北へ車で約1時間。19世紀のグエン王朝が残した宮殿群。ユネスコ世界遺産。</p>
+          <a class="img-link" href="https://www.google.com/search?q=フエ+グエン王朝+王宮+世界遺産&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://image.co-trip.jp/content/14renewal_images_l/98211/main_image.jpg" alt="フォンニャ洞窟">
+        <div class="tile-body">
+          <strong>フォンニャ＝ケバン国立公園</strong>
+          <p>ダナンから約310km（車5〜7時間）。世界最大級の鍾乳洞群。ユネスコ世界自然遺産。1泊2日以上の行程が基本。</p>
+          <a class="img-link" href="https://www.google.com/search?q=フォンニャ+ケバン+国立公園+洞窟&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+    </div>
+    <!-- ミーソン -->
+    <div style="display:flex; gap:16px; align-items:flex-start; background:#fff; border:1px solid #e0e0e0; border-radius:8px; padding:14px; margin-top:4px;">
+      <img src="https://blog-static.kkday.com/ja/blog/wp-content/uploads/image-473-1024x576.png" alt="ミーソン聖域" style="width:180px; height:120px; object-fit:cover; border-radius:6px; flex-shrink:0;">
+      <div>
+        <strong style="font-size:14px;">ミーソン聖域（遠距離スポット）</strong>
+        <p style="font-size:13px; color:#555; margin-top:4px;">ホイアンから南西約40km（車1時間）。4〜13世紀のチャム王国の遺跡群。ユネスコ世界遺産。ホイアン発の日帰りツアーが便利。</p>
+        <a class="img-link" href="https://www.google.com/search?q=ミーソン聖域+ベトナム+遺跡&tbm=isch" target="_blank">画像を見る →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- アクティビティ -->
+  <section id="activity">
+    <h2>🏄 アクティビティ</h2>
+    <div class="tiles">
+      <div class="tile">
+        <img src="https://919vn.com/wp-content/uploads/2026/02/z7501205560478_3401e1bb101a487e6a099b2b1555d21f-e1770253469303.jpg" alt="マリンスポーツ">
+        <div class="tile-body">
+          <strong>マリンスポーツ（ミーケービーチ）</strong>
+          <p>ジェットスキー・バナナボート・スノーケリングなど。ビーチ沿いの業者で当日予約OK。</p>
+          <a class="img-link" href="https://www.google.com/search?q=ダナン+ミーケービーチ+ジェットスキー+マリンスポーツ&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=375,height=375,dpr=2/tour_img/b5fa4b1e840e41a9b0875d8f17bce57827fcb06174fd0692164422f7e89c59e9.png" alt="ホイアン サイクリング">
+        <div class="tile-body">
+          <strong>ホイアン旧市街サイクリング</strong>
+          <p>旧市街内は自転車がベスト。レンタサイクルで路地裏まで探索。</p>
+          <a class="img-link" href="https://www.google.com/search?q=ホイアン+サイクリング+旧市街&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://cdn2.veltra.com/ptr/20240723010012_1754525588_3072_0.jpg?imwidth=550&impolicy=custom" alt="ミーソン ツアー">
+        <div class="tile-body">
+          <strong>ミーソン聖域ツアー</strong>
+          <p>ホイアン発の日帰りツアーが便利。半日〜1日コース。早朝出発がおすすめ。</p>
+          <a class="img-link" href="https://www.google.com/search?q=ミーソン聖域+ツアー+ホイアン&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 夜の過ごし方 -->
+  <section id="night">
+    <h2>🌙 夜の過ごし方</h2>
+    <div class="tiles">
+      <div class="tile">
+        <img src="https://www.tnkjapan.com/jvs/img/tourist/lantern01.jpg" alt="ホイアン ランタン祭り">
+        <div class="tile-body">
+          <strong>🏮 ホイアン旧市街の夜散歩</strong>
+          <p>ランタンが灯る旧市街は格別。毎月旧暦14日は「ランタン祭り」で電灯が消えて幻想的。</p>
+          <a class="img-link" href="https://www.google.com/search?q=ホイアン+ランタン+夜+祭り&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://www.tnkjapan.com/storage/tours/0523123609_5b04e1a9c2c5b.jpg" alt="ホイアン ナイトマーケット">
+        <div class="tile-body">
+          <strong>🛍️ ホイアン・ナイトマーケット（アンホイ橋）</strong>
+          <p>アンホイ島のアンホイ橋周辺に毎晩立つナイトマーケット。屋台・雑貨・ランタンが並ぶ。</p>
+          <a class="img-link" href="https://www.google.com/search?q=ホイアン+ナイトマーケット+アンホイ橋&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://danang-holic.com/wp-content/uploads/2023/10/image6-1-1024x683.jpg" alt="ダナン ビーチバー">
+        <div class="tile-body">
+          <strong>🍹 ダナンのビーチバー</strong>
+          <p>ミーケービーチ沿いにバーやシーフードレストランが点在。夕暮れ時に海風を感じながら食事を楽しめる。</p>
+          <a class="img-link" href="https://www.google.com/search?q=ダナン+ビーチバー+夜&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- カフェ・グルメスポット -->
+  <section id="cafe">
+    <h2>☕ カフェ・グルメスポット</h2>
+    <div class="tiles">
+      <div class="tile">
+        <img src="https://ak-d.tripcdn.com/images/1mi1b224x9655faqu7C73.jpg?proc=resize%2Fm_z%2Cw_375%2Ch_0%3Bformat%2Ff_webp%2C9C2E" alt="ナムハウスカフェ">
+        <div class="tile-body">
+          <strong>ナムハウスカフェ（Nam House Cafe）（ダナン）</strong>
+          <p>ドラゴン橋近くの路地にある、レトロな雰囲気のカフェ。アンティーク家具と1990年代ベトナムの空気感。エッグコーヒーが名物。</p>
+          <a class="img-link" href="https://www.google.com/search?q=Nam+House+Cafe+ダナン&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/9e/9a/7b/caption.jpg?w=1100&h=1100&s=1" alt="ソルトパブ&レストラン">
+        <div class="tile-body">
+          <strong>ソルトパブ＆レストラン（Salt Pub & Restaurant）（ホイアン）</strong>
+          <p>ホイアンで人気のシーフードレストラン。落ち着いた雰囲気。</p>
+          <a class="img-link" href="https://www.google.com/search?q=Salt+Pub+Restaurant+ホイアン&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://cdn2.veltra.com/ptr/20240220080153_1847365139_16529_0.jpg?imwidth=800&impolicy=custom" alt="ザ・デックハウス">
+        <div class="tile-body">
+          <strong>ザ・デックハウス（The Deck House）（ホイアン）</strong>
+          <p>川沿いのテラス席が人気のレストラン。夜は特に雰囲気が良い。</p>
+          <a class="img-link" href="https://www.google.com/search?q=The+Deck+House+ホイアン&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 食事 -->
+  <section id="food">
+    <h2>🍽️ 食事</h2>
+    <ul class="food-list">
+      <li>🥖 <strong>バインミー</strong> — ホイアン発祥とも言われるベトナムサンドイッチ <a class="img-link" href="https://www.google.com/search?q=バインミー+ホイアン&tbm=isch" target="_blank">画像を見る →</a></li>
+      <li>🍜 <strong>ミークアン</strong> — ダナン名物の幅広米麺。スープ少なめでコクのある味 <a class="img-link" href="https://www.google.com/search?q=ミークアン+ダナン&tbm=isch" target="_blank">画像を見る →</a></li>
+      <li>🍝 <strong>カオラウ</strong> — ホイアン名物。太麺×豚肉×揚げワンタンの独特な麺料理 <a class="img-link" href="https://www.google.com/search?q=カオラウ+ホイアン&tbm=isch" target="_blank">画像を見る →</a></li>
+    </ul>
+  </section>
+
+  <!-- 宿泊 -->
+  <section id="stay">
+    <h2>🏨 宿泊のおすすめ</h2>
+    <div class="stay-option">
+      <strong>🏖️ ビーチ重視でリゾート気分 → ミーケービーチ沿い</strong>
+      <p style="font-size:13px; margin-top:4px;">海沿いのリゾートホテルが充実</p>
+      <img class="stay-img" src="https://trip.aruru.co.jp/wp-content/uploads/2026/05/four-points-danang-hotel-review-0.jpg" alt="ミーケービーチ リゾートホテル">
+      <p class="price">相場：約1万〜2万円/泊（2名合計）</p>
+    </div>
+    <div class="stay-option">
+      <strong>🏛️ 世界遺産の雰囲気を満喫 → ホイアン旧市街周辺</strong>
+      <p style="font-size:13px; margin-top:4px;">古民家ホテルが風情あり・ダナンより安め</p>
+      <p class="price">相場：約5千〜1.5万円/泊（2名合計）</p>
+    </div>
+  </section>
+
+  <!-- ホイアン旧市街 -->
+  <section id="hoian">
+    <h2>🏛️ ホイアン旧市街（ダナンから30分）</h2>
+    <img class="section-img" src="https://danang-holic.com/wp-content/uploads/2023/03/image4-24-1024x683.jpg" alt="ホイアン 旧市街">
+    <ul class="text-list">
+      <li>ダナンから車・タクシーで約30〜40分</li>
+      <li>15〜19世紀の日本・中国・ポルトガル商人が残した建築が混在</li>
+      <li>「来遠橋（日本橋）」など、日本人にも縁の深いスポットあり</li>
+      <li>旧市街内は徒歩またはサイクリングで巡れる</li>
+      <li><strong>アンホイ島</strong>：アンホイ橋（An Hoi Bridge）周辺に毎晩ナイトマーケットが立つ</li>
+      <li><strong>ホイアン市場</strong>：昼間に地元の生鮮食品・名物料理が並ぶ庶民的な市場</li>
+    </ul>
+    <a class="img-link" href="https://www.google.com/search?q=ホイアン+旧市街+世界遺産&tbm=isch" target="_blank">ホイアン旧市街の画像を見る →</a>
+  </section>
+
+  <!-- ビーチ -->
+  <section id="beach">
+    <h2>🏖️ ビーチ</h2>
+    <div class="tiles-2">
+      <div class="tile">
+        <img src="https://danang-holic.com/wp-content/uploads/2023/06/DSC00692-2-1024x683.jpg" alt="ミーケービーチ">
+        <div class="tile-body">
+          <strong>ミーケービーチ</strong>
+          <p>ダナンから最も近い。全長約30km。マリンスポーツが盛ん。8月は乾季で海況◎。</p>
+          <a class="img-link" href="https://www.google.com/search?q=ミーケービーチ+ダナン+海&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://danang-holic.com/wp-content/uploads/2025/03/image-1024x682.jpg" alt="アンバンビーチ">
+        <div class="tile-body">
+          <strong>アンバンビーチ</strong>
+          <p>ホイアン近郊で最も人気のビーチ。レストランやカフェが並ぶ。落ち着いた雰囲気。</p>
+          <a class="img-link" href="https://www.google.com/search?q=アンバンビーチ+ホイアン&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

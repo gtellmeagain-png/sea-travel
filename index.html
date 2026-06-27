@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東南アジア旅行 候補一覧</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; background: #f9f9f8; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
+
+  .header {
+    background: #1a1a2e; color: #fff;
+    padding: 32px 20px; text-align: center;
+  }
+  .header h1 { font-size: 26px; font-weight: bold; margin-bottom: 8px; }
+  .header p { font-size: 14px; color: #aaa; }
+
+  .info-bar {
+    background: #fff; border-bottom: 1px solid #e0e0e0;
+    padding: 12px 20px; text-align: center;
+    font-size: 13px; color: #555;
+    display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;
+  }
+  .info-bar span { font-weight: bold; color: #1a1a1a; }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px; }
+
+  h2 { font-size: 16px; color: #888; font-weight: normal; margin-bottom: 20px; }
+
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  @media (max-width: 600px) { .cards { grid-template-columns: 1fr; } }
+
+  .card {
+    background: #fff; border: 1px solid #e0e0e0; border-radius: 10px;
+    overflow: hidden; text-decoration: none; color: inherit;
+    display: block; transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+
+  .card-img { width: 100%; height: 160px; object-fit: cover; display: block; }
+
+  .card-body { padding: 14px 16px; }
+  .card-title { font-size: 16px; font-weight: bold; margin-bottom: 6px; }
+  .card-catch { font-size: 12px; color: #555; margin-bottom: 10px; line-height: 1.5; }
+
+  .card-meta { display: flex; flex-wrap: wrap; gap: 6px; }
+  .meta-tag {
+    background: #f0f0f0; border-radius: 12px;
+    padding: 3px 10px; font-size: 11px; color: #444;
+  }
+  .meta-tag.season-good { background: #e8f5e9; color: #2e7d32; }
+  .meta-tag.season-rain { background: #fff8e1; color: #e67e00; }
+
+  .card-rank {
+    display: inline-block; background: #1a1a2e; color: #fff;
+    font-size: 11px; font-weight: bold; padding: 2px 8px;
+    border-radius: 10px; margin-bottom: 6px;
+  }
+
+  .card-note {
+    font-size: 12px; color: #c62828; margin-top: 6px; font-weight: bold;
+  }
+
+  .card-cta {
+    display: block; text-align: center; margin-top: 12px;
+    background: #4a90d9; color: #fff; border-radius: 6px;
+    padding: 8px; font-size: 13px; font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>東南アジア旅行 候補一覧</h1>
+  <p>2026年8月中旬・3名・3〜4泊</p>
+</div>
+
+<div class="info-bar">
+  <div>人数 <span>3名</span></div>
+  <div>時期 <span>8月中旬</span></div>
+  <div>泊数 <span>3〜4泊</span></div>
+  <div>予算 <span>1人30万円未満</span></div>
+</div>
+
+<div class="container">
+  <h2>候補地をクリックして詳細を確認してください</h2>
+
+  <div class="cards">
+
+    <!-- 1位 -->
+    <a class="card" href="vietnam-danang-hoian.html">
+      <img class="card-img" src="https://cdn2.veltra.com/ptr/20190607063156_2027026882_2087_0.jpg?imwidth=800&impolicy=custom" alt="ダナン・ホイアン">
+      <div class="card-body">
+        <div class="card-rank">1位</div>
+        <div class="card-title">ベトナム / ダナン・ホイアン</div>
+        <div class="card-catch">ビーチ×世界遺産の両立。8月は乾季でベストシーズン。</div>
+        <div class="card-meta">
+          <span class="meta-tag season-good">☀️ 8月は乾季</span>
+          <span class="meta-tag">✈️ 直行 約5〜6時間</span>
+          <span class="meta-tag">💰 安め</span>
+        </div>
+        <span class="card-cta">詳細を見る →</span>
+      </div>
+    </a>
+
+    <!-- 2位 -->
+    <a class="card" href="thailand-bangkok-ayutthaya.html">
+      <img class="card-img" src="https://www.wisebk.com/wp-content/uploads/2022/09/roof_top_bar_02.jpg" alt="バンコク">
+      <div class="card-body">
+        <div class="card-rank">2位</div>
+        <div class="card-title">タイ / バンコク・アユタヤ</div>
+        <div class="card-catch">食・寺院・夜が揃う「全部乗せ」の旅先。世界遺産アユタヤも日帰り可。</div>
+        <div class="card-meta">
+          <span class="meta-tag season-rain">🌧️ 8月は雨季（観光◎）</span>
+          <span class="meta-tag">✈️ 直行 約6〜7時間</span>
+          <span class="meta-tag">💰 安め</span>
+        </div>
+        <span class="card-cta">詳細を見る →</span>
+      </div>
+    </a>
+
+    <!-- 3位 -->
+    <a class="card" href="cambodia-siemreap.html">
+      <img class="card-img" src="https://www.pbcruise.jp/blog/wp-content/uploads/2025/05/shutterstock_1407231071-770x422.jpg" alt="アンコールワット">
+      <div class="card-body">
+        <div class="card-rank">3位</div>
+        <div class="card-title">ベトナム（ダナン or ホイアン）<br>＋ カンボジア / アンコールワット・シェムリアップ 周遊</div>
+        <div class="card-catch">一生に一度は見たい世界最大の寺院遺跡。ダナン・ホイアンとの周遊ルートが人気。</div>
+        <div class="card-meta">
+          <span class="meta-tag season-rain">🌧️ 8月は雨季（遺跡観光◎）</span>
+          <span class="meta-tag">✈️ バンコク乗継</span>
+          <span class="meta-tag">💰 非常に安め</span>
+        </div>
+        <span class="card-cta">詳細を見る →</span>
+      </div>
+    </a>
+
+    <!-- 4位 -->
+    <a class="card" href="vietnam-hochiminh.html">
+      <img class="card-img" src="https://i0.wp.com/vietnam-lifestyle.com/wp-content/uploads/2018/07/vietnam-ho-chi-minh-city-maisema-ss-1-1.jpg?fit=860%2C645&ssl=1" alt="ホーチミン">
+      <div class="card-body">
+        <div class="card-rank">4位</div>
+        <div class="card-title">ベトナム / ホーチミン・メコンデルタ</div>
+        <div class="card-catch">ベトナム最大の都市。屋台・ルーフトップバー・歴史。メコンデルタも日帰り可。</div>
+        <div class="card-meta">
+          <span class="meta-tag season-rain">🌧️ 8月は雨季</span>
+          <span class="meta-tag">✈️ 直行 約5〜6時間</span>
+          <span class="meta-tag">💰 非常に安め</span>
+        </div>
+        <span class="card-cta">詳細を見る →</span>
+      </div>
+    </a>
+
+    <!-- 5位 -->
+    <a class="card" href="indonesia-lombok.html">
+      <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvcmoLRVXwy8ss-s5kOOo_wcGv9aFBi0-wbQ&s" alt="ロンボク島">
+      <div class="card-body">
+        <div class="card-rank">5位</div>
+        <div class="card-title">インドネシア / ロンボク島・ギリ島</div>
+        <div class="card-catch">バリより静か。透明な海でダイビング・シュノーケル。車もバイクもないギリ島。</div>
+        <div class="card-meta">
+          <span class="meta-tag season-good">☀️ 8月は乾季</span>
+          <span class="meta-tag">✈️ バリ経由 約8〜9時間</span>
+          <span class="meta-tag">💰 安め〜中級</span>
+        </div>
+        <div class="card-note">⚠️ 航空券が予算オーバーになる可能性あり</div>
+        <span class="card-cta">詳細を見る →</span>
+      </div>
+    </a>
+
+    <!-- 6位 -->
+    <a class="card" href="indonesia-bali.html">
+      <img class="card-img" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800" alt="バリ島">
+      <div class="card-body">
+        <div class="card-rank">6位</div>
+        <div class="card-title">インドネシア / バリ島</div>
+        <div class="card-catch">神々の島。寺院・棚田・ビーチ・ナイトライフが1島に凝縮。</div>
+        <div class="card-meta">
+          <span class="meta-tag season-good">☀️ 8月は乾季</span>
+          <span class="meta-tag">✈️ 直行 約7時間</span>
+          <span class="meta-tag">💰 中級</span>
+        </div>
+        <div class="card-note">⚠️ 航空券が予算オーバーになる可能性あり</div>
+        <span class="card-cta">詳細を見る →</span>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+</body>
+</html>

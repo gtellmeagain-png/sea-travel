@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>インドネシア / バリ島</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; background: #f9f9f8; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
+  .hero { background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200'); background-size: cover; background-position: center; height: 320px; display: flex; align-items: flex-end; padding: 24px 32px; }
+  .hero-title { background: rgba(0,0,0,0.55); color: #fff; padding: 12px 20px; border-radius: 8px; font-size: 24px; font-weight: bold; }
+  .container { max-width: 860px; margin: 0 auto; padding: 32px 20px; }
+  .toc { background: #eef4ff; border-left: 4px solid #4a90d9; padding: 16px 20px; border-radius: 6px; margin-bottom: 32px; }
+  .toc h3 { font-size: 14px; margin-bottom: 8px; color: #4a90d9; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .toc a { color: #4a90d9; text-decoration: none; font-size: 14px; }
+  .toc a:hover { text-decoration: underline; }
+  .catch { background: #fff; border-left: 4px solid #e8a000; padding: 14px 18px; border-radius: 6px; margin-bottom: 16px; font-size: 15px; }
+  .catch p { margin: 4px 0; }
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+  .badge { background: #fff; border: 1px solid #ddd; padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: bold; }
+  section { margin-bottom: 48px; }
+  h2 { font-size: 20px; font-weight: bold; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #e0e0e0; }
+  .merit-demerit { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 600px) { .merit-demerit { grid-template-columns: 1fr; } }
+  .merit, .demerit { background: #fff; border-radius: 8px; padding: 16px 20px; border: 1px solid #e0e0e0; }
+  .merit h3 { color: #2e7d32; margin-bottom: 8px; }
+  .demerit h3 { color: #c62828; margin-bottom: 8px; }
+  .merit ul, .demerit ul { padding-left: 18px; }
+  .merit li, .demerit li { margin: 4px 0; font-size: 14px; }
+  .location-box { background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 16px 20px; font-size: 14px; line-height: 2; }
+  .location-box a { color: #e67e00; }
+  .section-img { width: 100%; max-height: 320px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; }
+  .text-list { padding-left: 20px; margin: 8px 0 12px; }
+  .text-list li { margin: 6px 0; }
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 16px; }
+  @media (max-width: 640px) { .tiles { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 400px) { .tiles { grid-template-columns: 1fr; } }
+  .tile { background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid #e0e0e0; }
+  .tile img { width: 100%; height: 140px; object-fit: cover; display: block; }
+  .tile-body { padding: 10px 12px; }
+  .tile-body strong { display: block; font-size: 13px; margin-bottom: 4px; }
+  .tile-body p { font-size: 12px; color: #555; margin-bottom: 6px; line-height: 1.5; }
+  .tile-body a { font-size: 12px; color: #4a90d9; text-decoration: none; }
+  .tile-body a:hover { text-decoration: underline; }
+  .food-list { list-style: none; padding: 0; }
+  .food-list li { background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px 14px; margin-bottom: 8px; font-size: 14px; }
+  .food-list a { color: #4a90d9; font-size: 12px; margin-left: 8px; }
+  .stay-option { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 14px 18px; margin-bottom: 8px; font-size: 14px; }
+  .stay-option strong { font-size: 14px; }
+  .stay-price { color: #888; font-size: 13px; }
+  .tip-box { background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 8px; padding: 12px 16px; font-size: 14px; margin-top: 12px; }
+  .img-link { font-size: 12px; color: #4a90d9; text-decoration: none; }
+  .img-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-title">インドネシア / バリ島</div>
+</div>
+
+<div class="container">
+
+  <div class="catch">
+    <p>神々の島。寺院・棚田・ビーチ・ナイトライフが1つの島に凝縮。</p>
+    <p>エリアで雰囲気が全然違う（クタ＝にぎやか、ウブド＝自然、スミニャック＝おしゃれ）</p>
+  </div>
+
+  <div class="badges">
+    <span class="badge">✈️ 日本から直行 約7時間</span>
+    <span class="badge">🌙 3〜4泊</span>
+    <span class="badge">☀️ 8月は乾季・ベストシーズン</span>
+    <span class="badge">💰 1.5万〜3万円/泊（2名合計）</span>
+  </div>
+
+  <div class="toc">
+    <h3>📌 目次</h3>
+    <ol>
+      <li><a href="#merit">メリット・デメリット</a></li>
+      <li><a href="#location">位置関係</a></li>
+      <li><a href="#bali">バリ島とは</a></li>
+      <li><a href="#spots">観光スポット</a></li>
+      <li><a href="#beach">ビーチ・リゾート</a></li>
+      <li><a href="#night">夜の過ごし方</a></li>
+      <li><a href="#food">食事</a></li>
+      <li><a href="#stay">宿泊のおすすめ</a></li>
+    </ol>
+  </div>
+
+  <section id="merit">
+    <h2>✅ メリット・デメリット</h2>
+    <div class="merit-demerit">
+      <div class="merit">
+        <h3>👍 メリット</h3>
+        <ul>
+          <li>直行便があり乗り継ぎ不要</li>
+          <li>8月は乾季でベストシーズン</li>
+          <li>食事が安くて多様（ワルン〜おしゃれレストランまで）</li>
+          <li>エリアで旅のスタイルを選べる（観光・自然・リゾート）</li>
+          <li>ナイトライフが充実（スミニャック・クタ）</li>
+        </ul>
+      </div>
+      <div class="demerit">
+        <h3>👎 デメリット</h3>
+        <ul>
+          <li>観光地化が進み、人気エリアは混雑しやすい</li>
+          <li>バイク事故に注意（交通マナーが独特）</li>
+          <li>物売りやボッタクリに注意が必要</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="location">
+    <h2>🗺️ 位置関係</h2>
+    <div class="location-box">
+      <strong>バリ島はインドネシア中部の小島。</strong><br>
+      日本から直行便で約7時間。首都ジャカルタとは別の島。<br>
+      南部（クタ・スミニャック・ヌサドゥア）が観光の中心、北部（ウブド）が自然・文化エリア。<br><br>
+      <a href="https://www.google.com/maps/place/Bali,+Indonesia/" target="_blank">🗺️ Google Maps で見る →</a>
+    </div>
+  </section>
+
+  <section id="bali">
+    <h2>🏖️ バリ島とは</h2>
+    <img class="section-img" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200" alt="バリ島の風景">
+    <ul class="text-list">
+      <li>インドネシアのリゾートアイランド。ヒンドゥー文化が残る「神々の島」</li>
+      <li>島内でエリアごとに雰囲気がガラリと変わるのが最大の特徴</li>
+      <li><strong>クタ・レギャン：</strong> 賑やかなビーチ・ショッピング・ナイトライフ</li>
+      <li><strong>スミニャック：</strong> おしゃれなカフェ・バー・ブティックが並ぶ高感度エリア</li>
+      <li><strong>ウブド：</strong> 棚田・寺院・伝統舞踊。自然と文化を楽しむエリア</li>
+      <li><strong>ヌサドゥア：</strong> 高級リゾートホテルが集まる静かなエリア</li>
+      <li><strong>ウルワトゥ：</strong> 断崖絶壁の寺院と美しいサンセットで有名</li>
+    </ul>
+    <a class="img-link" href="https://www.google.com/search?q=バリ島+絶景&tbm=isch" target="_blank">バリ島の画像を見る →</a>
+  </section>
+
+  <section id="spots">
+    <h2>🛕 観光スポット</h2>
+    <div class="tiles">
+      <div class="tile">
+        <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=600" alt="タナロット寺院">
+        <div class="tile-body">
+          <strong>タナロット寺院</strong>
+          <p>海の岩礁に建つバリ島のシンボル。夕陽の名所。</p>
+          <a class="img-link" href="https://www.google.com/search?q=タナロット寺院+バリ島&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://images.unsplash.com/photo-1531592937781-344ad608fabf?w=600" alt="ウブドの棚田">
+        <div class="tile-body">
+          <strong>ウブドの棚田（テガラランライステラス）</strong>
+          <p>緑の段々畑が広がる絶景スポット。早朝がおすすめ。</p>
+          <a class="img-link" href="https://www.google.com/search?q=テガラランライステラス+ウブド&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=600" alt="ウルワトゥ寺院">
+        <div class="tile-body">
+          <strong>ウルワトゥ寺院</strong>
+          <p>断崖の上に立つ寺院。ケチャックダンスとサンセットが見どころ。</p>
+          <a class="img-link" href="https://www.google.com/search?q=ウルワトゥ寺院+バリ島&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="beach">
+    <h2>🌊 ビーチ・リゾート</h2>
+    <div class="tiles">
+      <div class="tile">
+        <img src="https://images.unsplash.com/photo-1561016444-14f747499547?w=600" alt="クタビーチ">
+        <div class="tile-body">
+          <strong>クタビーチ</strong>
+          <p>バリ最大のビーチ。サーフィンや夕陽鑑賞に人気。賑やか。</p>
+          <a class="img-link" href="https://www.google.com/search?q=クタビーチ+バリ島&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://images.unsplash.com/photo-1604928141064-207cea6f571f?w=600" alt="スミニャック">
+        <div class="tile-body">
+          <strong>スミニャック</strong>
+          <p>おしゃれなカフェ・バー・ブティックが集まる大人エリア。ビーチも広い。</p>
+          <a class="img-link" href="https://www.google.com/search?q=スミニャック+ビーチ+バリ島&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600" alt="ヌサドゥア">
+        <div class="tile-body">
+          <strong>ヌサドゥア</strong>
+          <p>高級リゾートホテルが集まる静かなエリア。大人旅向け。</p>
+          <a class="img-link" href="https://www.google.com/search?q=ヌサドゥア+バリ島+リゾート&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="night">
+    <h2>🌙 夜の過ごし方</h2>
+    <img class="section-img" src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1200" alt="スミニャックのバー">
+    <ul class="text-list">
+      <li><strong>スミニャック：</strong> おしゃれなルーフトップバー・ビーチバーが集まる。夕陽を眺めながらカクテル</li>
+      <li><strong>クタ：</strong> 活気あるクラブ・バーが並ぶエリア。賑やかな夜を楽しみたい人向け</li>
+      <li><strong>ウルワトゥ：</strong> 断崖寺院でケチャックダンス（日没後）を鑑賞。幻想的な雰囲気</li>
+      <li><strong>ウブド：</strong> 伝統舞踊（レゴン・バロン）の夜公演。文化体験として人気</li>
+    </ul>
+    <a class="img-link" href="https://www.google.com/search?q=バリ島+ナイトライフ+スミニャック&tbm=isch" target="_blank">バリ島のナイトライフ画像を見る →</a>
+  </section>
+
+  <section id="food">
+    <h2>🍽️ 食事</h2>
+    <ul class="food-list">
+      <li>🍳 <strong>ナシゴレン</strong> — インドネシア式チャーハン。バリ島でも定番。どこでも食べられる <a class="img-link" href="https://www.google.com/search?q=バリ島+ナシゴレン&tbm=isch" target="_blank">画像を見る →</a></li>
+      <li>🐷 <strong>バビグリン</strong> — バリ名物の豚の丸焼き。ウブドの有名店「イブ・オカ」が人気 <a class="img-link" href="https://www.google.com/search?q=バビグリン+バリ島&tbm=isch" target="_blank">画像を見る →</a></li>
+      <li>🍜 <strong>ミーゴレン</strong> — 焼きそば風の麺料理。屋台から高級店まで幅広い</li>
+      <li>🦞 <strong>ジンバランシーフード</strong> — ジンバランのレストランで海辺の新鮮魚介を堪能 <a class="img-link" href="https://www.google.com/search?q=ジンバラン+シーフード+バリ&tbm=isch" target="_blank">画像を見る →</a></li>
+    </ul>
+  </section>
+
+  <section id="stay">
+    <h2>🏨 宿泊のおすすめ</h2>
+    <div class="stay-option">
+      <strong>🏖️ ヌサドゥア</strong> — 高級リゾートが集まるエリア。静かにゆっくりしたい人向け
+      <p class="stay-price">1泊2〜4万円（2名合計）</p>
+    </div>
+    <div class="stay-option">
+      <strong>✨ スミニャック</strong> — おしゃれなブティックホテルが多い。観光とナイトライフ両立
+      <p class="stay-price">1泊1.5〜3万円（2名合計）</p>
+    </div>
+    <div class="stay-option">
+      <strong>✈️ クタ</strong> — 空港に近くアクセス良好。予算重視の選択肢も多い
+      <p class="stay-price">1泊1〜2万円（2名合計）</p>
+    </div>
+    <div class="stay-option">
+      <strong>🌿 ウブド</strong> — 自然に囲まれたヴィラや棚田ビューの宿が充実
+      <p class="stay-price">1泊1.5〜3万円（2名合計）</p>
+    </div>
+    <div class="tip-box">
+      💡 3名旅行なら「ヴィラ（プライベートプール付き）」が1室あたりのコスパが高くおすすめ
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

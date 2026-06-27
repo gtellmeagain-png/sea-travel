@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>タイ / バンコク・アユタヤ</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; background: #f9f9f8; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
+
+  .hero {
+    height: 320px; display: flex; align-items: flex-end;
+    padding: 24px 32px; position: relative; overflow: hidden;
+  }
+  .hero::before, .hero::after {
+    content: ''; position: absolute; top: 0; bottom: 0; width: 50%;
+    background-size: cover; background-position: center;
+  }
+  .hero::before {
+    left: 0;
+    background-image: url('https://magazine.thaiiku.net/wp-content/uploads/2024/01/bangkok12.png');
+  }
+  .hero::after {
+    right: 0;
+    background-image: url('https://tripull.asia/wp-content/uploads/2019/12/ayutthaya1.jpg');
+  }
+  .hero-title {
+    position: relative; z-index: 1;
+    background: rgba(0,0,0,0.55); color: #fff;
+    padding: 12px 20px; border-radius: 8px;
+    font-size: 24px; font-weight: bold;
+  }
+
+  .container { max-width: 860px; margin: 0 auto; padding: 32px 20px; }
+
+  .toc { background: #eef4ff; border-left: 4px solid #4a90d9; padding: 16px 20px; border-radius: 6px; margin-bottom: 32px; }
+  .toc h3 { font-size: 14px; margin-bottom: 8px; color: #4a90d9; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .toc a { color: #4a90d9; text-decoration: none; font-size: 14px; }
+  .toc a:hover { text-decoration: underline; }
+
+  .catch { background: #fff; border-left: 4px solid #e8a000; padding: 14px 18px; border-radius: 6px; margin-bottom: 16px; font-size: 15px; }
+  .catch p { margin: 4px 0; }
+
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+  .badge { background: #fff; border: 1px solid #ddd; padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: bold; }
+
+  section { margin-bottom: 48px; }
+  h2 { font-size: 20px; font-weight: bold; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #e0e0e0; }
+
+  .merit-demerit { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 600px) { .merit-demerit { grid-template-columns: 1fr; } }
+  .merit, .demerit { background: #fff; border-radius: 8px; padding: 16px 20px; border: 1px solid #e0e0e0; }
+  .merit h3 { color: #2e7d32; margin-bottom: 8px; }
+  .demerit h3 { color: #c62828; margin-bottom: 8px; }
+  .merit ul, .demerit ul { padding-left: 18px; }
+  .merit li, .demerit li { margin: 4px 0; font-size: 14px; }
+
+  .location-box { background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 16px 20px; font-size: 14px; line-height: 2; }
+  .location-box a { color: #e67e00; }
+
+  .section-img { width: 100%; max-height: 320px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; }
+
+  .text-list { padding-left: 20px; margin: 8px 0 12px; }
+  .text-list li { margin: 6px 0; }
+
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 16px; }
+  @media (max-width: 640px) { .tiles { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 400px) { .tiles { grid-template-columns: 1fr; } }
+
+  .tiles-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  @media (max-width: 500px) { .tiles-2 { grid-template-columns: 1fr; } }
+
+  .tile { background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid #e0e0e0; }
+  .tile img { width: 100%; height: 140px; object-fit: cover; display: block; }
+  .tile-body { padding: 10px 12px; }
+  .tile-body strong { display: block; font-size: 13px; margin-bottom: 4px; }
+  .tile-body p { font-size: 12px; color: #555; margin-bottom: 6px; line-height: 1.5; }
+  .tile-body a { font-size: 12px; color: #4a90d9; text-decoration: none; }
+  .tile-body a:hover { text-decoration: underline; }
+
+  .food-list { list-style: none; padding: 0; }
+  .food-list li { background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px 14px; margin-bottom: 8px; font-size: 14px; }
+  .food-list a { color: #4a90d9; font-size: 12px; margin-left: 8px; }
+
+  .stay-option { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; }
+  .stay-option strong { font-size: 15px; }
+  .stay-option .price { color: #888; font-size: 13px; margin-top: 4px; }
+
+  .img-link { font-size: 12px; color: #4a90d9; text-decoration: none; }
+  .img-link:hover { text-decoration: underline; }
+
+  .side-card { display: flex; gap: 16px; align-items: flex-start; background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 14px; margin-bottom: 12px; }
+  .side-card img { width: 200px; height: 130px; object-fit: cover; border-radius: 6px; flex-shrink: 0; }
+  .side-card-body strong { font-size: 14px; }
+  .side-card-body p { font-size: 13px; color: #555; margin-top: 4px; line-height: 1.5; }
+  @media (max-width: 600px) { .side-card { flex-direction: column; } .side-card img { width: 100%; height: 180px; } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-title">タイ / バンコク・アユタヤ</div>
+</div>
+
+<div class="container">
+
+  <div class="catch">
+    <p><strong>バンコク</strong> → 食・寺院・夜が揃う大都市。動きやすく、初めてでも迷わない。</p>
+    <p><strong>アユタヤ</strong> → バンコクから電車2時間。世界遺産の遺跡が静かに広がる歴史の街。</p>
+  </div>
+
+  <div class="badges">
+    <span class="badge">✈️ 日本から直行 約6〜7時間</span>
+    <span class="badge">🌙 4〜5泊</span>
+    <span class="badge">🌧️ 8月は雨季（観光◎）</span>
+    <span class="badge">💰 約8〜12万円</span>
+  </div>
+
+  <div class="toc">
+    <h3>📌 目次</h3>
+    <ol>
+      <li><a href="#merit">メリット・デメリット</a></li>
+      <li><a href="#location">位置関係</a></li>
+      <li><a href="#bangkok">バンコクとは</a></li>
+      <li><a href="#spots">観光スポット</a></li>
+      <li><a href="#night">夜の過ごし方</a></li>
+      <li><a href="#stay">宿泊のおすすめ</a></li>
+      <li><a href="#ayutthaya">アユタヤ（日帰り可）</a></li>
+    </ol>
+  </div>
+
+  <section id="merit">
+    <h2>✅ メリット・デメリット</h2>
+    <div class="merit-demerit">
+      <div class="merit">
+        <h3>👍 メリット</h3>
+        <ul>
+          <li>食事がとにかくうまい・安い・多様</li>
+          <li>直行便あり、移動・宿・食が全体的に安め</li>
+          <li>夜も観光も遺跡も全部ある「全部乗せ」の旅先</li>
+        </ul>
+      </div>
+      <div class="demerit">
+        <h3>👎 デメリット</h3>
+        <ul>
+          <li>8月は雨季（毎日スコールあり）</li>
+          <li>バンコク市内の渋滞が激しい</li>
+          <li>自然・リゾート感は薄め（海・ビーチなし）</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="location">
+    <h2>🗺️ 位置関係</h2>
+    <div class="location-box">
+      タイ<br>
+      ▼ <strong>バンコク</strong>（首都）<br>
+      ↓ 電車・バスで約1.5〜2時間<br>
+      ▼ <strong>アユタヤ</strong>（日帰り可）<br><br>
+      <a href="https://www.google.com/maps/dir/Bangkok/Ayutthaya" target="_blank">🗺️ Google Maps で位置を確認する →</a>
+    </div>
+  </section>
+
+  <section id="bangkok">
+    <h2>🏙️ バンコクとは</h2>
+    <img class="section-img" src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1492795724-65deb7fa1d1ea.jpg?crop=1.00xw:0.892xh;0,0.0392xh&w=600" alt="バンコク市街">
+    <ul class="text-list">
+      <li>東南アジア屈指の大都市。高層ビルと寺院が共存する独特の景観</li>
+      <li>BTS（スカイトレイン）・MRT・Grab で移動しやすい</li>
+      <li>屋台の絶品メシ〜ルーフトップの高級ダイニングまで食の選択肢が桁違い</li>
+    </ul>
+  </section>
+
+  <section id="spots">
+    <h2>🛕 観光スポット</h2>
+    <div class="tiles">
+      <div class="tile">
+        <img src="https://www.triphoo.jp/dataupload/images/adv/i/BKK/Wat-Arun_1003main.jpg" alt="ワットアルン">
+        <div class="tile-body">
+          <strong>ワット・アルン（暁の寺）</strong>
+          <p>チャオプラヤー川沿いの塔寺院。夕暮れが絶景。</p>
+          <a class="img-link" href="https://www.google.com/search?q=ワット・アルン+バンコク&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://lade.jp/wp-content/uploads/2019/12/IMG_3456.jpg" alt="ワットポー">
+        <div class="tile-body">
+          <strong>ワット・ポー（涅槃仏）</strong>
+          <p>全長46mの巨大な寝釈迦仏。王宮の隣。</p>
+          <a class="img-link" href="https://www.google.com/search?q=ワット・ポー+バンコク&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://www.thaismile.jp/FotoGallary/ThaiPics/BKK/GrandPalace/SceneryBuildings/TH_IMG_9410.jpg" alt="王宮">
+        <div class="tile-body">
+          <strong>バンコク王宮</strong>
+          <p>タイ王室の旧王宮。敷地内に複数の寺院あり。</p>
+          <a class="img-link" href="https://www.google.com/search?q=バンコク王宮&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+    </div>
+    <div class="side-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyLHDeyBoYoQi8U2kT9cPK5Y3AfRSChV93JA&s" alt="水上マーケット">
+      <div class="side-card-body">
+        <strong>💧 水上マーケット（バンコク郊外・約1.5時間）</strong>
+        <p>ボートに乗りながら屋台料理・土産を買えるダムヌン・サドゥアク。午前中がベスト。</p>
+        <a class="img-link" href="https://www.google.com/search?q=ダムヌン・サドゥアク+水上マーケット&tbm=isch" target="_blank">画像を見る →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="night">
+    <h2>🌙 夜の過ごし方</h2>
+    <div class="tiles">
+      <div class="tile">
+        <img src="https://www.wisebk.com/wp-content/uploads/2022/09/roof_top_bar_02.jpg" alt="ルーフトップバー">
+        <div class="tile-body">
+          <strong>ルーフトップバー</strong>
+          <p>摩天楼を見下ろしながら飲む夜景が最高。</p>
+          <a class="img-link" href="https://www.google.com/search?q=バンコク+ルーフトップバー&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5krVbnAUSTlTd-CB23QNHSkEbA6CwPYVNEg&s" alt="ナイトマーケット">
+        <div class="tile-body">
+          <strong>ナイトマーケット</strong>
+          <p>屋台・食・雑貨・ストリートフードが集まる夜の市。</p>
+          <a class="img-link" href="https://www.google.com/search?q=バンコク+ナイトマーケット&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://taikiworld-blog.com/wp-content/uploads/2023/09/Nomad-Life.jpg" alt="ムエタイ">
+        <div class="tile-body">
+          <strong>🥊 ムエタイ観戦</strong>
+          <p>ラジャダムナン・スタジアムなど。試合は夜がメイン。</p>
+          <a class="img-link" href="https://www.google.com/search?q=ムエタイ+バンコク+観戦&tbm=isch" target="_blank">画像を見る →</a>
+        </div>
+      </div>
+    </div>
+    <div style="background:#fff; border:1px solid #e0e0e0; border-radius:6px; padding:10px 14px; font-size:14px;">
+      🍜 <strong>ヤワラート（中華街）</strong> — 夜は屋台が立ち並ぶ、地元民も集まる食の聖地
+      <a class="img-link" href="https://www.google.com/search?q=ヤワラート+中華街+バンコク+夜&tbm=isch" target="_blank" style="margin-left:8px;">画像を見る →</a>
+    </div>
+  </section>
+
+  <section id="stay">
+    <h2>🏨 宿泊のおすすめ</h2>
+    <div class="stay-option">
+      <strong>🏙️ 観光・寺院・夜を楽しみたい → バンコク市内泊</strong>
+      <p style="font-size:13px; margin-top:4px;">スクンビット通りとその周辺エリアが便利</p>
+      <p class="price">相場：約1万〜2万円/泊（2名合計）</p>
+    </div>
+    <div class="stay-option">
+      <strong>🏛️ アユタヤもじっくり楽しみたい → アユタヤ泊</strong>
+      <p style="font-size:13px; margin-top:4px;">日帰りよりゆったり。バンコクより安め。</p>
+      <p class="price">相場：約5千〜1.5万円/泊（2名合計）</p>
+    </div>
+  </section>
+
+  <section id="ayutthaya">
+    <h2>🏛️ アユタヤ（日帰り可）</h2>
+    <img class="section-img" src="https://www.his-j.com/theme/world-heritage/asia/thailand/ayutthaya/img/main04.jpg" alt="アユタヤ遺跡">
+    <ul class="text-list">
+      <li>バンコクから電車・バスで約1.5〜2時間</li>
+      <li>14〜18世紀に栄えた古都。ユネスコ世界遺産</li>
+      <li>レンタサイクルで遺跡群をのんびり巡れる</li>
+      <li><strong>ワット・マハタート</strong>：木の根に埋もれた仏頭が有名</li>
+    </ul>
+    <a class="img-link" href="https://www.google.com/search?q=アユタヤ+遺跡+世界遺産&tbm=isch" target="_blank">アユタヤ遺跡の画像を見る →</a>
+  </section>
+
+</div>
+</body>
+</html>
