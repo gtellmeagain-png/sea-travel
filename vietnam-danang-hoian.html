@@ -131,6 +131,14 @@
   /* 画像を見る → */
   .img-link { font-size: 12px; color: #4a90d9; text-decoration: none; }
   .img-link:hover { text-decoration: underline; }
+
+  /* 予算テーブル */
+  .budget-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 8px; }
+  .budget-table th { background: #f0f0f0; padding: 8px 12px; text-align: left; font-weight: bold; border: 1px solid #ddd; }
+  .budget-table td { padding: 8px 12px; border: 1px solid #ddd; }
+  .budget-table tr:nth-child(even) td { background: #fafafa; }
+  .budget-total td { background: #1a1a2e; color: #fff; font-weight: bold; border-color: #1a1a2e; }
+  .budget-note { font-size: 12px; color: #888; margin-top: 8px; }
 </style>
 </head>
 <body>
@@ -168,6 +176,7 @@
       <li><a href="#night">夜の過ごし方</a></li>
       <li><a href="#cafe">カフェ・グルメスポット</a></li>
       <li><a href="#food">食事</a></li>
+      <li><a href="#budget">予算の目安</a></li>
       <li><a href="#stay">宿泊のおすすめ</a></li>
       <li><a href="#hoian">ホイアン旧市街</a></li>
       <li><a href="#beach">ビーチ</a></li>
@@ -399,6 +408,20 @@
   </section>
 
   <!-- 宿泊 -->
+  <section id="budget">
+    <h2>💴 予算の目安（1人あたり・3泊4日）</h2>
+    <table class="budget-table">
+      <tr><th>項目</th><th>福岡発</th><th>関東発</th></tr>
+      <tr><td>✈️ 航空券（往復）</td><td>5〜7万円</td><td>6〜8万円</td></tr>
+      <tr><td>🏨 宿泊（3泊・中級ホテル）</td><td colspan="2">1〜2万円（3名で割り勘）</td></tr>
+      <tr><td>🍽️ 食費（3泊4日）</td><td colspan="2">1〜1.5万円</td></tr>
+      <tr><td>🛕 観光・アクティビティ</td><td colspan="2">0.5〜1万円</td></tr>
+      <tr><td>🚕 現地交通（Grab等）</td><td colspan="2">3,000〜5,000円</td></tr>
+      <tr class="budget-total"><td>合計目安</td><td>約8〜12万円</td><td>約9〜13万円</td></tr>
+    </table>
+    <p class="budget-note">※ 8月お盆ピーク期間は航空券が1〜2万円高くなる場合あり。宿泊費は3名でシェアした場合の1人あたり。現地物価が安いため食費・交通費は抑えやすい。</p>
+  </section>
+
   <section id="stay">
     <h2>🏨 宿泊のおすすめ</h2>
     <div class="stay-option">
