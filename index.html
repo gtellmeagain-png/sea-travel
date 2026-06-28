@@ -6,7 +6,16 @@
 <title>東南アジア旅行 候補一覧</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; background: #f9f9f8; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
+  body { font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; background: #f9f9f8; color: #1a1a1a; line-height: 1.7; font-size: 15px; padding-top: 44px; }
+
+  /* 上部固定ナビ */
+  .topnav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(26,26,46,0.95); backdrop-filter: blur(8px); display: flex; align-items: center; gap: 0; padding: 0 16px; height: 44px; overflow-x: auto; scrollbar-width: none; }
+  .topnav::-webkit-scrollbar { display: none; }
+  .topnav-home { color: #fff; text-decoration: none; font-size: 13px; font-weight: bold; white-space: nowrap; padding: 0 12px 0 4px; border-right: 1px solid rgba(255,255,255,0.2); margin-right: 8px; }
+  .topnav-home:hover { color: #7eb8f7; }
+  .topnav a.plan-link { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 12px; white-space: nowrap; padding: 0 10px; border-radius: 4px; transition: color 0.2s; }
+  .topnav a.plan-link:hover { color: #fff; }
+  .topnav a.plan-link.active { color: #7eb8f7; font-weight: bold; }
 
   .header {
     background: #1a1a2e; color: #fff;
@@ -69,6 +78,8 @@
 </style>
 </head>
 <body>
+
+<script src="nav.js"></script>
 
 <div class="header">
   <h1>東南アジア旅行 候補一覧</h1>
