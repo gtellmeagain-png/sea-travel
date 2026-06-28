@@ -45,9 +45,12 @@
   .food-list { list-style: none; padding: 0; }
   .food-list li { background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px 14px; margin-bottom: 8px; font-size: 14px; }
   .food-list a { color: #4a90d9; font-size: 12px; margin-left: 8px; }
-  .stay-option { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 14px 18px; margin-bottom: 8px; font-size: 14px; }
+  .stay-option { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; margin-bottom: 8px; font-size: 14px; display: flex; align-items: stretch; }
+  .stay-option-img { width: 120px; min-width: 120px; object-fit: cover; display: block; }
+  .stay-option-body { padding: 14px 18px; flex: 1; }
   .stay-option strong { font-size: 14px; }
   .stay-price { color: #888; font-size: 13px; }
+  @media (max-width: 500px) { .stay-option { flex-direction: column; } .stay-option-img { width: 100%; height: 140px; min-width: unset; } }
   .tip-box { background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 8px; padding: 12px 16px; font-size: 14px; margin-top: 12px; }
   .img-link { font-size: 12px; color: #4a90d9; text-decoration: none; }
   .img-link:hover { text-decoration: underline; }
@@ -410,37 +413,13 @@
 
   <section id="stay">
     <h2>🏨 宿泊のおすすめ</h2>
-    <div class="stay-option">
-      <strong>🏖️ ヌサドゥア</strong> — 高級リゾートが集まるエリア。静かにゆっくりしたい人向け
-      <p class="stay-price">1泊2〜4万円（2名合計）</p>
-    </div>
-    <div class="stay-option">
-      <strong>✨ スミニャック</strong> — おしゃれなブティックホテルが多い。観光とナイトライフ両立
-      <p class="stay-price">1泊1.5〜3万円（2名合計）</p>
-    </div>
-    <div class="stay-option">
-      <strong>✈️ クタ</strong> — 空港に近くアクセス良好。予算重視の選択肢も多い
-      <p class="stay-price">1泊1〜2万円（2名合計）</p>
-    </div>
-    <div class="stay-option">
-      <strong>🌿 ウブド</strong> — 自然に囲まれたヴィラや棚田ビューの宿が充実
-      <p class="stay-price">1泊1.5〜3万円（2名合計）</p>
-    </div>
-    <div class="stay-option">
-      <strong>🏊 テラス アット クタ（The Layar / Legian）</strong>（クタ・レギャン）
-      <p style="font-size:13px; margin-top:4px;">レギャン通り近く。朝食付き4,000円台〜のリーズナブルな中級ホテル。ビーチへのアクセス良好。</p>
-      <p class="stay-price">1泊4,000〜8,000円（1室あたり目安）</p>
-    </div>
-    <div class="stay-option">
-      <strong>🌿 マヤ ウブド（Maya Ubud Resort & Spa）</strong>（ウブド）
-      <p style="font-size:13px; margin-top:4px;">棚田・渓谷ビューの4つ星リゾート。スパ・プール完備。ウブドの自然をじっくり楽しみたい人向け。</p>
-      <p class="stay-price">1泊1〜1.5万円（1室あたり目安）</p>
-    </div>
-    <div class="stay-option">
-      <strong>🤿 バリ エメラルド ヴィラス（Bali Emerald Villas）</strong>（サヌール）
-      <p style="font-size:13px; margin-top:4px;">プール付きヴィラがコスパ良し。サヌールのダイビング・シュノーケル拠点に近く、海派に最適。</p>
-      <p class="stay-price">1泊8,000〜1.5万円（1室あたり目安）</p>
-    </div>
+    <div class="stay-option"><img class="stay-option-img" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=300" alt="ヌサドゥア"><div class="stay-option-body"><strong>🏖️ ヌサドゥア</strong> — 高級リゾートが集まるエリア。静かにゆっくりしたい人向け<p class="stay-price">1泊2〜4万円（2名合計）</p></div></div>
+    <div class="stay-option"><img class="stay-option-img" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=300" alt="スミニャック"><div class="stay-option-body"><strong>✨ スミニャック</strong> — おしゃれなブティックホテルが多い。観光とナイトライフ両立<p class="stay-price">1泊1.5〜3万円（2名合計）</p></div></div>
+    <div class="stay-option"><img class="stay-option-img" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=300" alt="クタ"><div class="stay-option-body"><strong>✈️ クタ</strong> — 空港に近くアクセス良好。予算重視の選択肢も多い<p class="stay-price">1泊1〜2万円（2名合計）</p></div></div>
+    <div class="stay-option"><img class="stay-option-img" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=300" alt="ウブド"><div class="stay-option-body"><strong>🌿 ウブド</strong> — 自然に囲まれたヴィラや棚田ビューの宿が充実<p class="stay-price">1泊1.5〜3万円（2名合計）</p></div></div>
+    <div class="stay-option"><img class="stay-option-img" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=300" alt="テラスアットクタ"><div class="stay-option-body"><strong>🏊 テラス アット クタ（The Layar / Legian）</strong>（クタ・レギャン）<p style="font-size:13px; margin-top:4px;">レギャン通り近く。朝食付き4,000円台〜のリーズナブルな中級ホテル。ビーチへのアクセス良好。</p><p class="stay-price">1泊4,000〜8,000円（1室あたり目安）</p></div></div>
+    <div class="stay-option"><img class="stay-option-img" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=300" alt="マヤウブド"><div class="stay-option-body"><strong>🌿 マヤ ウブド（Maya Ubud Resort & Spa）</strong>（ウブド）<p style="font-size:13px; margin-top:4px;">棚田・渓谷ビューの4つ星リゾート。スパ・プール完備。ウブドの自然をじっくり楽しみたい人向け。</p><p class="stay-price">1泊1〜1.5万円（1室あたり目安）</p></div></div>
+    <div class="stay-option"><img class="stay-option-img" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=300" alt="バリエメラルドヴィラス"><div class="stay-option-body"><strong>🤿 バリ エメラルド ヴィラス（Bali Emerald Villas）</strong>（サヌール）<p style="font-size:13px; margin-top:4px;">プール付きヴィラがコスパ良し。サヌールのダイビング・シュノーケル拠点に近く、海派に最適。</p><p class="stay-price">1泊8,000〜1.5万円（1室あたり目安）</p></div></div>
     <div class="tip-box">
       💡 4名旅行なら「ヴィラ（プライベートプール付き）」が1室あたりのコスパが高くおすすめ
     </div>
