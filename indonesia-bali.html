@@ -53,9 +53,51 @@
   .tip-box { background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 8px; padding: 12px 16px; font-size: 14px; margin-top: 12px; }
   .img-link { font-size: 12px; color: #4a90d9; text-decoration: none; }
   .img-link:hover { text-decoration: underline; }
+
+  /* 予算テーブル */
+  .budget-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 8px; }
+  .budget-table th { background: #f0f0f0; padding: 8px 12px; text-align: left; font-weight: bold; border: 1px solid #ddd; }
+  .budget-table td { padding: 8px 12px; border: 1px solid #ddd; }
+  .budget-table tr:nth-child(even) td { background: #fafafa; }
+  .budget-total td { background: #1a1a2e; color: #fff; font-weight: bold; border-color: #1a1a2e; }
+  .budget-note { font-size: 12px; color: #888; margin-top: 8px; }
+
+  /* 上部固定ナビ */
+  .topnav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(26,26,46,0.95); backdrop-filter: blur(8px);
+    display: flex; align-items: center; gap: 0;
+    padding: 0 16px; height: 44px; overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .topnav::-webkit-scrollbar { display: none; }
+  .topnav-home {
+    color: #fff; text-decoration: none; font-size: 13px; font-weight: bold;
+    white-space: nowrap; padding: 0 12px 0 4px;
+    border-right: 1px solid rgba(255,255,255,0.2); margin-right: 8px;
+  }
+  .topnav-home:hover { color: #7eb8f7; }
+  .topnav a.plan-link {
+    color: rgba(255,255,255,0.75); text-decoration: none; font-size: 12px;
+    white-space: nowrap; padding: 0 10px; border-radius: 4px;
+    transition: color 0.2s;
+  }
+  .topnav a.plan-link:hover { color: #fff; }
+  .topnav a.plan-link.active { color: #7eb8f7; font-weight: bold; }
+  body { padding-top: 44px; }
 </style>
 </head>
 <body>
+
+<nav class="topnav">
+  <a class="topnav-home" href="index.html">🌏 一覧</a>
+  <a class="plan-link" href="vietnam-danang-hoian.html">ダナン・ホイアン</a>
+  <a class="plan-link" href="thailand-bangkok-ayutthaya.html">バンコク・アユタヤ</a>
+  <a class="plan-link" href="cambodia-siemreap.html">アンコールワット</a>
+  <a class="plan-link" href="vietnam-hochiminh.html">ホーチミン</a>
+  <a class="plan-link" href="indonesia-lombok.html">ロンボク・ギリ島</a>
+  <a class="plan-link active" href="indonesia-bali.html">バリ島</a>
+</nav>
 
 <div class="hero">
   <div class="hero-title">インドネシア / バリ島</div>
@@ -122,6 +164,21 @@
       <a href="https://www.google.com/maps/place/Bali,+Indonesia/" target="_blank">🗺️ Google Maps で見る →</a>
     </div>
     <img src="https://www.travel-zentech.jp/world/map/Indonesia/image/Map_of_Bali_Island_in_Indonesia.png" alt="バリ島 地図" style="width:100%; border-radius:8px; margin-top:12px; display:block;">
+  </section>
+
+  <section id="budget">
+    <h2>💴 予算の目安（1人あたり・3泊4日）</h2>
+    <table class="budget-table">
+      <tr><th>項目</th><th>福岡 → バリ島直行</th><th>関東 → バリ島直行</th></tr>
+      <tr><td>✈️ 航空券（往復・1人）</td><td>8〜12万円</td><td>7〜11万円</td></tr>
+      <tr><td>🏨 宿泊（1泊／室・3名1室）</td><td>1〜3万円</td><td>1〜3万円</td></tr>
+      <tr><td>🏨 宿泊（3泊合計・1人あたり）</td><td>1〜3万円</td><td>1〜3万円</td></tr>
+      <tr><td>🍽️ 食費（1日あたり・1人）</td><td>1,500〜4,000円</td><td>1,500〜4,000円</td></tr>
+      <tr><td>🛕 観光・アクティビティ（全日程）</td><td>5,000〜1.5万円</td><td>5,000〜1.5万円</td></tr>
+      <tr><td>🚕 現地交通（Grab・タクシー・全日程）</td><td>3,000〜6,000円</td><td>3,000〜6,000円</td></tr>
+      <tr class="budget-total"><td>合計目安（1人）</td><td>約12〜19万円</td><td>約11〜18万円</td></tr>
+    </table>
+    <p class="budget-note">※ ※ 8月は乾季でベストシーズン。福岡発：ガルーダ・シンガポール航空等乗継便が中心。関東発：ガルーダ直行・シンガポール航空等。3名でヴィラ（プライベートプール付き）を1室借りると宿泊費のコスパが上がる。</p>
   </section>
 
   <section id="bali">
