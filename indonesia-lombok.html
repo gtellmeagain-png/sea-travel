@@ -34,9 +34,7 @@
   .section-img { width: 100%; max-height: 320px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; }
   .text-list { padding-left: 20px; margin: 8px 0 12px; }
   .text-list li { margin: 6px 0; }
-  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 16px; }
-  @media (max-width: 640px) { .tiles { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 400px) { .tiles { grid-template-columns: 1fr; } }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-bottom: 16px; }
   .tiles-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
   @media (max-width: 500px) { .tiles-2 { grid-template-columns: 1fr; } }
   .tile { background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid #e0e0e0; }

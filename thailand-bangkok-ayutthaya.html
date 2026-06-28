@@ -65,9 +65,7 @@
   .text-list { padding-left: 20px; margin: 8px 0 12px; }
   .text-list li { margin: 6px 0; }
 
-  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 16px; }
-  @media (max-width: 640px) { .tiles { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 400px) { .tiles { grid-template-columns: 1fr; } }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-bottom: 16px; }
 
   .tiles-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
   @media (max-width: 500px) { .tiles-2 { grid-template-columns: 1fr; } }
