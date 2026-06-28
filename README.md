@@ -7,10 +7,10 @@
 | 順位 | 行き先 | リンク |
 |---|---|---|
 | — | 📋 候補一覧（トップ） | [一覧を見る](https://gtellmeagain-png.github.io/sea-travel/) |
-| 1位 | ベトナム / ダナン・ホイアン | [ページを見る](https://gtellmeagain-png.github.io/sea-travel/vietnam-danang-hoian.html) |
-| 2位 | タイ / バンコク・アユタヤ | [ページを見る](https://gtellmeagain-png.github.io/sea-travel/thailand-bangkok-ayutthaya.html) |
-| 3位 | ベトナム＋カンボジア / アンコールワット・シェムリアップ 周遊 | [ページを見る](https://gtellmeagain-png.github.io/sea-travel/cambodia-siemreap.html) |
-| 4位 | ベトナム / ホーチミン・メコンデルタ | [ページを見る](https://gtellmeagain-png.github.io/sea-travel/vietnam-hochiminh.html) |
-| 5位 | インドネシア / ロンボク島・ギリ島 ⚠️予算オーバー可能性あり | [ページを見る](https://gtellmeagain-png.github.io/sea-travel/indonesia-lombok.html) |
-| 6位 | インドネシア / バリ島 ⚠️予算オーバー可能性あり | [ページを見る](https://gtellmeagain-png.github.io/sea-travel/indonesia-bali.html) |
+| 1位 | インドネシア / バリ島 | [ページを見る](https://gtellmeagain-png.github.io/sea-travel/indonesia-bali.html) |
+| 2位 | ベトナム / ダナン・ホイアン | [ページを見る](https://gtellmeagain-png.github.io/sea-travel/vietnam-danang-hoian.html) |
+| 3位 | タイ / バンコク・アユタヤ | [ページを見る](https://gtellmeagain-png.github.io/sea-travel/thailand-bangkok-ayutthaya.html) |
+| 4位 | ベトナム＋カンボジア / アンコールワット・シェムリアップ 周遊 | [ページを見る](https://gtellmeagain-png.github.io/sea-travel/cambodia-siemreap.html) |
+| 5位 | ベトナム / ホーチミン・メコンデルタ | [ページを見る](https://gtellmeagain-png.github.io/sea-travel/vietnam-hochiminh.html) |
+| 6位 | インドネシア / ロンボク島・ギリ島 ⚠️予算オーバー可能性あり | [ページを見る](https://gtellmeagain-png.github.io/sea-travel/indonesia-lombok.html) |
 | 参考 | フィリピン / セブ島 ⚠️福岡発なし・8月雨季 | [ページを見る](https://gtellmeagain-png.github.io/sea-travel/philippines.html) |
