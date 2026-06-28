@@ -13,3 +13,4 @@
 | 4位 | ベトナム / ホーチミン・メコンデルタ | [ページを見る](https://gtellmeagain-png.github.io/sea-travel/vietnam-hochiminh.html) |
 | 5位 | インドネシア / ロンボク島・ギリ島 ⚠️予算オーバー可能性あり | [ページを見る](https://gtellmeagain-png.github.io/sea-travel/indonesia-lombok.html) |
 | 6位 | インドネシア / バリ島 ⚠️予算オーバー可能性あり | [ページを見る](https://gtellmeagain-png.github.io/sea-travel/indonesia-bali.html) |
+| 参考 | フィリピン / セブ島 ⚠️福岡発なし・8月雨季 | [ページを見る](https://gtellmeagain-png.github.io/sea-travel/philippines.html) |

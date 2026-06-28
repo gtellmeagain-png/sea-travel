@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>フィリピン / セブ島</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; background: #f9f9f8; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
+  .hero { background-image: url('https://qqenglish.jp/wordpress/wp-content/uploads/2024/06/ceoblog-kids2024_3.jpeg'); background-size: cover; background-position: center; height: 320px; display: flex; align-items: flex-end; padding: 24px 32px; }
+  .hero-title { background: rgba(0,0,0,0.55); color: #fff; padding: 12px 20px; border-radius: 8px; font-size: 24px; font-weight: bold; }
+  .container { max-width: 860px; margin: 0 auto; padding: 32px 20px; }
+  .toc { background: #eef4ff; border-left: 4px solid #4a90d9; padding: 16px 20px; border-radius: 6px; margin-bottom: 32px; }
+  .toc h3 { font-size: 14px; margin-bottom: 8px; color: #4a90d9; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin: 4px 0; }
+  .toc a { color: #4a90d9; text-decoration: none; font-size: 14px; }
+  .toc a:hover { text-decoration: underline; }
+  .catch { background: #fff; border-left: 4px solid #e8a000; padding: 14px 18px; border-radius: 6px; margin-bottom: 16px; font-size: 15px; }
+  .catch p { margin: 4px 0; }
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+  .badge { background: #fff; border: 1px solid #ddd; padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: bold; }
+  .badge-warn { background: #fff3e0; border-color: #ffb74d; color: #e65100; }
+  section { margin-bottom: 48px; }
+  h2 { font-size: 20px; font-weight: bold; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #e0e0e0; }
+  .merit-demerit { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 600px) { .merit-demerit { grid-template-columns: 1fr; } }
+  .merit, .demerit { background: #fff; border-radius: 8px; padding: 16px 20px; border: 1px solid #e0e0e0; }
+  .merit h3 { color: #2e7d32; margin-bottom: 8px; }
+  .demerit h3 { color: #c62828; margin-bottom: 8px; }
+  .merit ul, .demerit ul { padding-left: 18px; }
+  .merit li, .demerit li { margin: 4px 0; font-size: 14px; }
+  .location-box { background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 16px 20px; font-size: 14px; line-height: 2; }
+  .location-box a { color: #e67e00; }
+  .warning-box { background: #fff3e0; border: 1px solid #ffb74d; border-radius: 8px; padding: 16px 20px; font-size: 14px; }
+  .warning-box h3 { color: #e65100; margin-bottom: 8px; font-size: 15px; }
+  .warning-box ul { padding-left: 18px; }
+  .warning-box li { margin: 6px 0; }
+  .stay-option { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; }
+  .stay-option strong { font-size: 15px; }
+  .stay-option .price { color: #888; font-size: 13px; margin-top: 4px; }
+  .img-link { font-size: 12px; color: #4a90d9; text-decoration: none; }
+  .img-link:hover { text-decoration: underline; }
+
+  /* 予算テーブル */
+  .budget-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 8px; }
+  .budget-table th { background: #f0f0f0; padding: 8px 12px; text-align: left; font-weight: bold; border: 1px solid #ddd; }
+  .budget-table td { padding: 8px 12px; border: 1px solid #ddd; }
+  .budget-table tr:nth-child(even) td { background: #fafafa; }
+  .budget-total td { background: #1a1a2e !important; color: #fff !important; font-weight: bold; border-color: #1a1a2e; }
+  .budget-note { font-size: 12px; color: #888; margin-top: 8px; }
+
+  /* 上部固定ナビ */
+  .topnav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(26,26,46,0.95); backdrop-filter: blur(8px);
+    display: flex; align-items: center; gap: 0;
+    padding: 0 16px; height: 44px; overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .topnav::-webkit-scrollbar { display: none; }
+  .topnav-home { color: #fff; text-decoration: none; font-size: 13px; font-weight: bold; white-space: nowrap; padding: 0 12px 0 4px; border-right: 1px solid rgba(255,255,255,0.2); margin-right: 8px; }
+  .topnav-home:hover { color: #7eb8f7; }
+  .topnav a.plan-link { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 12px; white-space: nowrap; padding: 0 10px; border-radius: 4px; transition: color 0.2s; }
+  .topnav a.plan-link:hover { color: #fff; }
+  .topnav a.plan-link.active { color: #7eb8f7; font-weight: bold; }
+  body { padding-top: 44px; }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="topnav-home" href="index.html">🌏 一覧</a>
+  <a class="plan-link" href="vietnam-danang-hoian.html">ダナン・ホイアン</a>
+  <a class="plan-link" href="thailand-bangkok-ayutthaya.html">バンコク・アユタヤ</a>
+  <a class="plan-link" href="cambodia-siemreap.html">アンコールワット</a>
+  <a class="plan-link" href="vietnam-hochiminh.html">ホーチミン</a>
+  <a class="plan-link" href="indonesia-lombok.html">ロンボク・ギリ島</a>
+  <a class="plan-link" href="indonesia-bali.html">バリ島</a>
+  <a class="plan-link active" href="philippines.html">フィリピン</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-title">フィリピン / セブ島</div>
+</div>
+
+<div class="container">
+
+  <div class="catch">
+    <p><strong>セブ島</strong> → 透明度の高い海でダイビング・シュノーケルが楽しめるリゾートアイランド。マクタン島のビーチリゾートが中心。</p>
+    <p style="margin-top:8px; font-size:13px; color:#c62828;">⚠️ マニラは8月が雨季のピークで観光に不向き。セブ島も雨季だが降雨量は比較的少なめ。</p>
+  </div>
+
+  <div class="badges">
+    <span class="badge">✈️ 関東・大阪発のみ（福岡発直行なし）</span>
+    <span class="badge">🌙 3〜4泊</span>
+    <span class="badge badge-warn">🌧️ 8月は雨季（スコールあり）</span>
+    <span class="badge">💰 中級ホテル 8千〜2.5万円/泊（2名合計）</span>
+  </div>
+
+  <div class="toc">
+    <h3>📌 目次</h3>
+    <ol>
+      <li><a href="#merit">メリット・デメリット</a></li>
+      <li><a href="#location">位置関係</a></li>
+      <li><a href="#budget">予算の目安</a></li>
+      <li><a href="#warning">注意事項</a></li>
+      <li><a href="#stay">宿泊のおすすめ</a></li>
+    </ol>
+  </div>
+
+  <section id="merit">
+    <h2>✅ メリット・デメリット</h2>
+    <div class="merit-demerit">
+      <div class="merit">
+        <h3>👍 メリット</h3>
+        <ul>
+          <li>海の透明度が高くダイビング・シュノーケルに最適</li>
+          <li>英語が通じやすく初心者でも安心</li>
+          <li>物価が安く食事・交通費を抑えやすい</li>
+          <li>フライト時間が約4〜5時間と比較的短い</li>
+        </ul>
+      </div>
+      <div class="demerit">
+        <h3>👎 デメリット</h3>
+        <ul>
+          <li>8月は雨季（スコールあり）</li>
+          <li>福岡発の直行便なし（関東・大阪発のみ）</li>
+          <li>マニラは雨季ピークで観光不向き</li>
+          <li>治安に注意が必要なエリアあり</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="location">
+    <h2>🗺️ 位置関係</h2>
+    <div class="location-box">
+      フィリピン<br>
+      ▼ <strong>マニラ</strong>（首都・ルソン島）— 8月は雨季ピーク、観光不向き<br>
+      ↓ 飛行機で約1時間20分<br>
+      ▼ <strong>セブ島</strong>（中部ビサヤ地方）— 雨季だが比較的降雨少なめ<br>
+      └ <strong>マクタン島</strong>（セブ空港のある島・リゾートエリア）<br><br>
+      <a href="https://www.google.com/maps/place/Cebu,+Philippines" target="_blank">🗺️ Google Maps でセブ島の位置を確認 →</a>
+    </div>
+    <img src="https://cebu-oh.com/images/top/map.png" alt="フィリピン・セブ島 地図" style="width:100%; border-radius:8px; margin-top:12px; display:block;">
+  </section>
+
+  <section id="budget">
+    <h2>💴 予算の目安（1人あたり・3泊4日）</h2>
+    <table class="budget-table">
+      <tr><th>項目</th><th>関東発（成田・羽田）</th><th>大阪発（関西）</th></tr>
+      <tr><td>✈️ 航空券（往復・1人）</td><td>4〜8万円</td><td>4〜8万円</td></tr>
+      <tr><td>⚠️ 福岡発</td><td colspan="2" style="color:#c62828;">直行便なし（乗継便のみ・割高になる）</td></tr>
+      <tr><td>🏨 宿泊（1泊／室・3名1室）</td><td>8,000〜2.5万円</td><td>8,000〜2.5万円</td></tr>
+      <tr><td>🏨 宿泊（3泊合計・1人あたり）</td><td>8,000〜2.5万円</td><td>8,000〜2.5万円</td></tr>
+      <tr><td>🍽️ 食費（1日あたり・1人）</td><td>1,500〜3,000円</td><td>1,500〜3,000円</td></tr>
+      <tr><td>🤿 アクティビティ（ダイビング等）</td><td>5,000〜1.5万円</td><td>5,000〜1.5万円</td></tr>
+      <tr><td>🚕 現地交通（タクシー・全日程）</td><td>2,000〜4,000円</td><td>2,000〜4,000円</td></tr>
+      <tr class="budget-total"><td>合計目安（1人）</td><td>約8〜14万円</td><td>約8〜14万円</td></tr>
+    </table>
+    <p class="budget-note">※ 8月はフライト需要が高くピーク価格になりやすい。福岡からはマニラ・香港・台北経由などの乗継便となり、所要時間・費用ともに増える。セブ直行は成田・関西からが主流。</p>
+  </section>
+
+  <section id="warning">
+    <h2>⚠️ 注意事項</h2>
+    <div class="warning-box">
+      <h3>⛔ マニラは今回の旅行では非推奨</h3>
+      <ul>
+        <li>8月はフィリピン全土で雨季だが、マニラ（ルソン島）は特に降雨量が多くピーク</li>
+        <li>台風シーズンと重なり、観光への影響が出やすい</li>
+        <li>市内の渋滞も深刻で移動効率が悪い</li>
+      </ul>
+      <br>
+      <h3>🌧️ セブ島の8月について</h3>
+      <ul>
+        <li>雨季ではあるが、マニラほど雨が多くない（比較的降雨量少なめ）</li>
+        <li>スコールは夕方が多く、午前中は晴れることも多い</li>
+        <li>海のコンディションは日によってばらつきあり</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="stay">
+    <h2>🏨 宿泊のおすすめ</h2>
+    <div class="stay-option">
+      <strong>🏖️ マクタン島のビーチリゾート</strong>
+      <p style="font-size:13px; margin-top:4px;">セブ空港と同じ島。シャングリラ・カンドゥイなど高級リゾートが集中。空港からのアクセス良好。</p>
+      <p class="price">相場：8,000〜2.5万円/泊（2名合計）</p>
+    </div>
+    <div class="stay-option">
+      <strong>🏙️ セブシティのホテル</strong>
+      <p style="font-size:13px; margin-top:4px;">マクタン橋を渡ったセブ島本島。ショッピングモール・レストランが充実。ビーチは車で20〜30分。</p>
+      <p class="price">相場：4,000〜1.5万円/泊（2名合計）</p>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
